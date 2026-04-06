@@ -30,11 +30,12 @@
 
         <h3 class="text-center mb-4">Membership Form</h3>
 
-        <form id="posseForm" action="https://api.staticforms.xyz/submit" method="POST">
+<form id="posseForm" action="https://api.web3forms.com/submit" method="POST">
 
-  <!-- StaticForms Config -->
-  <input type="hidden" name="accessKey" value="sf_79e8332852b31bba25ccaf7a">
-  <input type="hidden" name="replyTo" value="@">
+  <!-- Web3Forms Config -->
+  <input type="hidden" name="access_key" value="a7480900-ecf5-4465-9b8f-230036001e22">
+  <input type="hidden" name="subject" value="New Founders Posse Signup">
+  <input type="hidden" name="from_name" value="Crooked D Creamery">
 
   <label>Full Name</label>
 <input type="text" name="name" class="form-control" placeholder="Full Name" required>
@@ -129,23 +130,14 @@ form.addEventListener("submit", function(e) {
 
   const formData = new FormData(form);
 
-  // Convert to JSON
-  const data = {};
-  formData.forEach((value, key) => {
-    data[key] = value;
-  });
-
   fetch(form.action, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify(data)
+    body: formData
   })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
 
-  .then(response => {
-    if (response.ok) {
       // Show modal
       const modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
       modal.show();
@@ -155,7 +147,8 @@ form.addEventListener("submit", function(e) {
         window.location.href = "https://pay.securegatewayonline.com/crookeddcreamery";
       }, 5000);
     } else {
-      throw new Error("Network response was not ok");
+      console.error(data);
+      alert("Submission failed. Please try again.");
     }
   })
   .catch(error => {
@@ -163,7 +156,6 @@ form.addEventListener("submit", function(e) {
     alert("Submission failed. Please try again.");
   });
 });
-
 </script>
 
 <!-- Styled Thank You Modal -->
