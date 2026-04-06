@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Join the Posse</title>
+<link rel="stylesheet" href="assets/styles.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/favicon_clean.png">
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content rope-border">
+
+      <h2 class="mt-4 pt-4">Crooked D Creamery</h2>
+      <h1 class="title">Join the Founders' Posse</h1>
+
+      <p class="subtitle">
+        Thank you for joining the Crooked D Creamery founders’ posse. Your membership helps bring Crooked D Creamery to life. Only 151 founding memberships will ever exist.
+      </p>
+
+      <div class="form-box">   
+
+        <h3 class="text-center mb-4">Membership Form</h3>
+
+        <form id="posseForm" action="https://api.staticforms.xyz/submit" method="POST">
+
+  <!-- StaticForms Config -->
+  <input type="hidden" name="accessKey" value="sf_79e8332852b31bba25ccaf7a">
+  <input type="hidden" name="redirectTo" value="https://pay.securegatewayonline.com/crookeddcreamery">
+
+  <label>Full Name</label>
+<input type="text" name="name" class="form-control" placeholder="Full Name" required>
+
+<label>Email Address</label>
+<input type="email" name="email" class="form-control" placeholder="Email Address" required>
+
+<label>Phone Number</label>
+<input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
+
+<label>City / State</label>
+<input type="text" name="location" class="form-control" placeholder="City, State" required>
+
+<label>Ear Tag Display Name</label>
+<input type="text" name="ear_tag_name" class="form-control" placeholder="Ear Tag Display Name" required>
+
+<label>T-Shirt Size</label>
+<select name="shirt_size" class="form-select" required>
+  <option value="">Select Size</option>
+  <option>S</option>
+  <option>M</option>
+  <option>L</option>
+  <option>XL</option>
+  <option>XXL</option>
+</select>
+
+<button type="submit" class="btn btn-custom mt-3" id="submitBtn" disabled>
+  Join the Posse
+</button>
+
+</form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="row">
+      <div class="col-xs-12 col-md-6 px-0">
+<section class="badge-wall text-center h-100">
+  <h2>MEMBERSHIP TERMS</h2>
+  <div>
+    <ul class="list-unstyled membership-terms">
+        <li>⭐ Membership cost: $400 per member</li>
+        <li>⭐ Membership is limited to 151 founding members</li>
+        <li>⭐ Memberships are sold on a first come, first serve basis</li>
+        <li>⭐ Memberships are non-refundable</li>
+        <li>⭐ Memberships are not transferable and are tied to the founding member name listed above</li>
+    </ul>
+  </div>
+  </div>
+</section>
+<div class="col-xs-12 col-md-6 px-0">
+<section class="cta h-100">
+    <h2>MEMBERSHIP BENEFITS</h2>
+  <ul class="list-unstyled">
+    <li>⭐ Your name on a branded cattle ear tag in our Founders' Room</li>
+    <li>⭐ One 24 oz exclusive pail of our "Founders' Flavor" of the month</li>
+    <li>⭐ One free scoop of ice cream of your choice</li>
+    <li>⭐ An official Crooked D Creamery Founders' Custom T-Shirt</li>
+    <li>⭐ One VIP commemorative token Sneak peek VIP invitation</li>
+    <li>⭐ Sneak peek</li>
+  </ul>
+</section>
+</div>
+
+<button class="btn btn-secondary mt-3" onclick="showThankYouModal()">
+  Test Styled Modal
+</button>
+
+<script>
+const form = document.getElementById("posseForm");
+const button = document.getElementById("submitBtn");
+const inputs = form.querySelectorAll("input, select");
+
+// Enable button when form is filled
+function checkForm() {
+  let allFilled = true;
+
+  inputs.forEach(input => {
+    if (!input.value.trim()) {
+      allFilled = false;
+    }
+  });
+
+  button.disabled = !allFilled;
+}
+
+inputs.forEach(input => {
+  input.addEventListener("input", checkForm);
+});
+
+// Handle submit
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // stop default redirect
+
+  const formData = new FormData(form);
+
+  // Send form to StaticForms
+  fetch(form.action, {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      // Show modal
+      const modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+      modal.show();
+
+      // Redirect after 5 seconds
+      setTimeout(() => {
+        window.location.href = "https://pay.securegatewayonline.com/crookeddcreamery";
+      }, 5000);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  })
+  .catch(() => {
+    alert("Submission failed. Please check your connection.");
+  });
+});
+</script>
+
+<script>
+const TEST_MODE = false; // set to false when live
+
+function showThankYouModal() {
+  const modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+  modal.show();
+
+  setTimeout(() => {
+    if (TEST_MODE) {
+      console.log("Redirect skipped (test mode)");
+    } else {
+      window.location.href = "https://pay.securegatewayonline.com/crookeddcreamery";
+    }
+  }, 5000);
+}
+</script>
+
+<!-- Styled Thank You Modal -->
+<div class="modal fade" id="thankYouModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content custom-modal text-center p-4">
+
+      <h2 class="mb-3 brand-title">🐄 Thank You, Partner!</h2>
+
+      <p class="mb-3">
+        You're officially joining the <strong>Founders' Posse</strong>.
+      </p>
+
+      <p class="mb-4">
+        You are now being securely redirected to our payment page to complete your membership.
+      </p>
+
+      <!-- Spinner -->
+      <div class="spinner"></div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
