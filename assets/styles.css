@@ -37,7 +37,7 @@ h1, h2, h3 {
   border-image-slice: 310; /* adjust based on your image */
   border-image-repeat: round; /* or round */
   border-image-width: 150px;
-  padding: 40px 80px !important; /* space inside frame */
+  padding: 40px 65px !important; /* space inside frame */
 }
 
 .rope-box {
@@ -342,8 +342,30 @@ button.btn.btn-custom:disabled:focus {
 }
 
 @media (max-width: 576px) { 
+    .hero .container {
+        padding: 0px;
+    }
     .rope-box {
         padding: 135px 0;
+    }
+    .title {
+        font-size: 1.2rem;
+    }
+    .price-box {
+        .price {
+            font-size: 2.6rem;
+        }
+        h3 {
+            font-size: .8rem;
+        }
+    }
+
+    .form-box {
+        padding: 25px 5px;
+        
+        h3{
+            font-size: 1.1rem;
+        }
     }
     
  }
