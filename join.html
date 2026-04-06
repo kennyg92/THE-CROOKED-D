@@ -128,10 +128,21 @@ form.addEventListener("submit", function(e) {
 
   const formData = new FormData(form);
 
+  // Convert to JSON
+  const data = {};
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
+
   fetch(form.action, {
     method: "POST",
-    body: formData
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify(data)
   })
+
   .then(response => {
     if (response.ok) {
       // Show modal
