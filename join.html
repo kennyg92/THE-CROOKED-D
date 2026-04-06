@@ -129,11 +129,10 @@ inputs.forEach(input => {
 
 // Handle submit
 form.addEventListener("submit", function(e) {
-  e.preventDefault(); // stop default redirect
+  e.preventDefault();
 
   const formData = new FormData(form);
 
-  // Send form to StaticForms
   fetch(form.action, {
     method: "POST",
     body: formData
@@ -149,13 +148,15 @@ form.addEventListener("submit", function(e) {
         window.location.href = "https://pay.securegatewayonline.com/crookeddcreamery";
       }, 5000);
     } else {
-      alert("Something went wrong. Please try again.");
+      throw new Error("Network response was not ok");
     }
   })
-  .catch(() => {
-    alert("Submission failed. Please check your connection.");
+  .catch(error => {
+    console.error(error);
+    alert("Submission failed. Please try again.");
   });
 });
+
 </script>
 
 <script>
