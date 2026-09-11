@@ -1,67 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crooked D Founders' Posse</title>
-<link rel="stylesheet" href="assets/styles.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Rye&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crooked D Creamery | Small Batch Ice Cream</title>
+    <meta name="description"
+          content="Handcrafted small batch ice cream made with fresh ingredients and a whole lot of heart.">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap"
+          rel="stylesheet">
+    <!-- Custom Fonts -->
+<!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+<!-- favicon -->
+ <link rel="icon" href="/favicon.ico">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/favicon_clean.png">
 </head>
 <body>
-
-<section class="hero">
-  <div class="container">
-    <div class="hero-content container rope-border">
-      <div class="rope-box">
-        <div class="corner top-left"></div>
-  <div class="hat top-right"></div>
-  <div class="hat bottom-left"></div>
-  <div class="corner bottom-right"></div>
-
-      <h2>The Crooked D</h2>
-      <h1 class="title">Founders' Posse</h1>
-      <h3>151 Members. One Legendary Creamery</h3>
-      <h5 class="font-weight-bold">Join the herd that's helping bring Crooked D Creamery to Life - An exclusive group limited to 151 members</h5>
-
-      <div class="price-box">
-        <div class="price">$400</div>
-        <h3>Founding Membership</h3>
-      </div>
-      <h5 class="font-weight-bold">As a member of this legendary group, you will receive upon opening:</h5>
-      <ul class="features list-unstyled">
-        <li><h3>Recognition:</h3>⭐ Your name on a branded cattle ear tag in our Founders' Room</li>
-        <li><h3>Monthly Treats for a year:</h3>⭐ One 24 oz exclusive pail of our "Founders' Flavor" of the month<br />⭐ One free scoop of ice cream of your choice</li>
-        <li><h3>Exclusive Gear:</h3>⭐ An official Crooked D Creamery Founders' Custom T-Shirt</li>
-        <li><h3>VIP Status:</h3>⭐ One VIP commemorative token<br />⭐ Sneak peek VIP invitation</li>
-      </ul>
-        <a href="join.html" class="btn btn-custom mt-3">
-          Join the Posse
+<!-- ========================================= -->
+<!-- NAVIGATION -->
+<!-- ========================================= -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div id="top" class="container">
+        <a class="navbar-brand" href="#top">
+            <img src="assets/images/logo/logo.png"
+                 alt="Crooked D Creamery"
+                 height="60">
         </a>
+        <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"
+             id="navbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="#about"
+                       class="nav-link">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#flavors"
+                       class="nav-link">
+                        Flavors
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#visit"
+                       class="nav-link">
+                        Visit
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
-  </div>
+</nav>
+<!-- ========================================= -->
+<!-- HERO -->
+<!-- ========================================= -->
+<header class="hero">
+    <div class="container hero-content">
+        <span class="hero-kicker">
+            EATONTON, GEORGIA • FAMILY OWNED
+        </span>
+        <h1>
+            Small Batch<br>
+            Ice Cream
+        </h1>
+        <p>
+            Handcrafted with fresh ingredients,
+            homemade recipes,
+            and a whole lot of heart.
+        </p>
+        <div class="hero-buttons">
+            <a href="flavors.html"
+               class="btn btn-brand btn-lg">
+                Explore Flavors
+            </a>
+            <a href="about.html"
+               class="btn btn-outline-light btn-lg">
+                About Us
+            </a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <i class="bi bi-chevron-double-down"></i>
+    </div>
+</header>
+<!-- SVG Divider -->
+<!-- ========================================= -->
+<!-- ABOUT -->
+<!-- ========================================= -->
+<section id="about"
+         class="section pattern">
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+                <img src="assets/images/about.jpeg"
+                     class="img-fluid rounded-5 shadow-lg"
+                     alt="Crooked D">
+            </div>
+            <div class="col-lg-6">
+                <span class="section-label">
+                    OUR STORY
+                </span>
+                <h2>
+                    Welcome to
+                    Crooked D Creamery
+                </h2>
+                <p>
+                    Crooked D Creamery was built on the belief that ice cream should be more than dessert—it should be an experience. A place where families gather after ball games, first dates become traditions, grandparents make memories with grandkids, and every visit feels like coming home.
+                </p>
+                <a href="about.html"
+                   class="btn btn-brand">
+                    Read Our Story
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
-
-<section class="badge-wall text-center">
-  <h2>Founding Members</h2>
-  <div>
-    <span class="badge">#01</span>
-    <span class="badge">#02</span>
-    <span class="badge">#03</span>
-    <span class="badge">#04</span>
-    <span class="badge">#05</span>
-    <span class="badge">#06</span>
-    <span class="badge">#07</span>
-    <span class="badge">#08</span>
-    <span class="badge">#09</span>
-    <span class="badge">#10</span>
-  </div>
+<!-- ========================================= -->
+<!-- FEATURED FLAVORS -->
+<!-- ========================================= -->
+<section id="flavors"
+         class="section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-label">
+                FAVORITES
+            </span>
+            <h2>
+                Featured Flavors
+            </h2>
+        </div>
+        <div class="row g-4 py-2-5">
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/big-green-tractor.jpg"
+                         alt="Big Green Tractor">
+                    <div class="card-body">
+                        <h3>Big Green Tractor</h3>
+                        <p>
+                            Mint Ice Cream with Chocolate Pieces like Tires Burning through the fields
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/black-baldy.jpg"
+                         alt="Black Baldy">
+                    <div class="card-body">
+                        <h3>Black Baldy</h3>
+                        <p>
+                            Sweet Cream Ice Cream with Homemade OREOS. A Rugged Classic with a Smooth Finish
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/brown-swiss.jpg"
+                         alt="Brown Swiss">
+                    <div class="card-body">
+                        <h3>Brown Swiss</h3>
+                        <p>
+                            Bold and Rich Chocolate Ice Cream that Tips its Hat to old fashion Fudge
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="row g-4 py-2-5">
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/buckaroo-brownie.jpg"
+                         alt="Buckaroo Brownie">
+                    <div class="card-body">
+                        <h3>Buckaroo Brownie</h3>
+                        <p>
+                            Chewy Fudge Brownie Bites Riding Through Bourbon Butter Pecan Ice Cream
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/cow-poke-crunch.jpg"
+                         alt="Cow Poke Crunch">
+                    <div class="card-body">
+                        <h3>Cow Poke Crunch</h3>
+                        <p>
+                            Cowboy Up with Coffee Ice Cream and Dark Chocolate Covered Espresso Beans
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/green-baleage.jpg"
+                         alt="Green Baleage">
+                    <div class="card-body">
+                        <h3>Green Baleage</h3>
+                        <p>
+                            Creamy Pistachio Ice Cream Loaded with Roasted Pistachios for a Rich Nutty flavor That's Greener Than a Fresh-cut Field After the Rain
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="row g-4 py-2-5">
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/gully-washer.jpg"
+                         alt="Gully Washer">
+                    <div class="card-body">
+                        <h3>Gully Washer</h3>
+                        <p>
+                            Rich Chocolate Ice Cream with Chewy Chocolate Brownie Chunks Rolling through Every Scoop like a Storm Down a Dirt Road
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/pecan-prairie.jpg"
+                         alt="Pecan Prairie">
+                    <div class="card-body">
+                        <h3>Pecan Prairie</h3>
+                        <p>
+                            Brown Butter Ice Cream and Toasted Pecans. A Slow-Churned Tribute to Wide Open Skies and a Southern Charm
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/pony-express.jpg"
+                         alt="Pony Express">
+                    <div class="card-body">
+                        <h3>Pony Express</h3>
+                        <p>
+                            Creamy Cake Batter Ice Cream loaded with Homemade Cookie Dough. Fast Delivery. No Wrong Turns
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="row g-4 py-2-5">
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/red-aryshire.jpg"
+                         alt="Red Aryshire">
+                    <div class="card-body">
+                        <h3>Red Aryshire</h3>
+                        <p>
+                            Smooth Strawberry Ice Cream with a Harvest of Fresh Strawberry Pieces
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/salty-saddle.jpg"
+                         alt="Salty Saddle">
+                    <div class="card-body">
+                        <h3>Salty Saddle</h3>
+                        <p>
+                            Salted Caramel Ice Cream with a Sass of Chocolate Chunks
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <article class="flavor-card">
+                    <img src="assets/images/flavors/sweet-charolais.jpg"
+                         alt="Sweet Charolais">
+                    <div class="card-body">
+                        <h3>Sweet Charolais</h3>
+                        <p>
+                            Classic and Creamy Vanilla Bean Ice Cream that Wrangles your Taste Buds
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="flavors.html"
+                       class="btn btn-brand">
+                        Explore All Flavors
+                    </a>
+        </div>
+    </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ========================================= -->
+<!-- MONTHLY ITALIAN ICE -->
+<!-- ========================================= -->
+<section id="italian-ice" class="italian-ice-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-label">
+                A LITTLE SOMETHING EXTRA
+            </span>
+            <h2>
+                Rotating Italian Ice Flavors
+            </h2>
+        </div>
+        <div class="row align-items-center g-5">
+            <!-- IMAGE -->
+            <div class="col-lg-5">
+                <div class="italian-ice-image">
+                    <img src="assets/images/flavors/italian-ice.jpg"
+                         class="img-fluid"
+                         alt="Crooked D Creamery Monthly Italian Ice">
+                </div>
+            </div>
+            <!-- CONTENT -->
+            <div class="col-lg-7">
+                <p>
+                    Cool, refreshing, and made fresh right here at
+                    Crooked D Creamery. Our Italian Ice flavor rotates every
+                    month, giving you something new to try every time
+                    you saddle up and stop by.
+                </p>
+                <p>
+                    Once the month is over, this flavor rides off into
+                    the sunset—so don't wait too long to give it a try!
+                </p>
+                <a href="flavors.html"
+                   class="btn btn-brand">
+                    Explore Our Flavors
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ========================================= -->
+<!-- WAFFLE BOWLS -->
+<!-- ========================================= -->
+<section id="waffle-bowls"
+         class="section pattern">
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            
+            <div class="col-lg-7">
+                <h2>
+                    Homemade Waffle Bowls
+                </h2>
+                <span class="section-label">
+                    Made to hold the good stuff—not steal the show.
+                </span>
+                <p>
+                    Our waffle bowls are made fresh in-house, thin and crispy with just the right touch of sweetness. Light, crunchy, and never overpowering, they’re crafted to complement our ice cream instead of competing with it. Because around here, even the bowl knows who the star is.
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <img src="assets/images/waffle-bowl.jpg"
+                     class="img-fluid rounded-5 shadow-lg"
+                     alt="Crooked D">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ========================================= -->
+<!-- WHY CROOKED D -->
+<!-- ========================================= -->
+<section class="section why">
+<div class="container">
+<div class="row text-center g-4">
+<div class="col-md-3">
+<i class="bi bi-heart-fill display-4"></i>
+<h4>Made with Love</h4>
+</div>
+<div class="col-md-3">
+<i class="bi bi-egg-fried display-4"></i>
+<h4>Fresh Ingredients</h4>
+</div>
+<div class="col-md-3">
+<i class="bi bi-shop display-4"></i>
+<h4>Family Owned</h4>
+</div>
+<div class="col-md-3">
+<i class="bi bi-stars display-4"></i>
+<h4>Small Batch</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================= -->
+<!-- VISIT -->
+<!-- ========================================= -->
+<section id="visit"
+class="section">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<h2>Visit Crooked D Creamery</h2>
+<p>Address<br />
+110 N Jefferson Ave, Eatonton, GA 31024</p>
+<p>Hours <br/>
+Tuesday - Friday: 2:00PM - 9:00PM<br />
+Saturday: 1:00PM - 10:00PM<br />
+Sunday - Monday: Closed</p>
+<p>Phone <br/>
+(727) 207-3640</p>
+<a class="btn btn-brand" href="https://www.google.com/maps/dir/28.2120073,-82.7067139/Crooked+D+Creamery,+110+N+Jefferson+Ave,+Eatonton,+GA+31024/@30.7288534,-85.5683922,7z/data=!4m10!4m9!1m1!4e1!1m5!1m1!1s0x88f6977e17ff07a9:0x8d64ed9445baa7df!2m2!1d-83.3886416!2d33.3271382!3e0?entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+Get Directions
+</a>
+</div>
+<div class="col-lg-6">
+<div class="map-placeholder">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.681615634045!2d-83.3886416!3d33.3271382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f6977e17ff07a9%3A0x8d64ed9445baa7df!2sCrooked%20D%20Creamery!5e0!3m2!1sen!2sus!4v1784734141862!5m2!1sen!2sus" class="responsive-iframe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+<footer>
+<div class="container text-center">
+<a href="#top"><img src="assets/images/logo/logo.png"
+             height="70"
+             alt="Crooked D Creamery Logo"
+             class="d-inline">
+        </a>
+<p>
+© <span class="current-year"></span> Crooked D Creamery
+</p>
+<div class="social-links">
+<a href="https://www.facebook.com/p/Crooked-D-Creamery-61577781920355/" target="_blank"><i class="bi bi-facebook"></i></a>
+<a href="https://www.instagram.com/crooked_d_creamery/" target="_blank"><i class="bi bi-instagram"></i></a>
+<a href="https://www.tiktok.com/@crooked_d_creamery?is_from_webapp=1&sender_device=pc" target="_blank"><i class="bi bi-tiktok"></i></a>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
