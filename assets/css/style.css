@@ -225,7 +225,7 @@ p {
 
 /* INTERIOR HERO */
 .internal-hero {
-    min-height: 70vh;
+    min-height: 610px;
     display: flex;
     align-items: center;
     justify-content: center;
