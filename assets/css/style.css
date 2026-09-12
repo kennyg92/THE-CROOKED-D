@@ -186,6 +186,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: .85rem;
+    padding-top: 75px;
 }
 
 .hero-buttons {
