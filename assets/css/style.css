@@ -624,6 +624,8 @@ footer p {
     h1 { font-size: 4rem; }
     h2 { font-size: 2.5rem; }
     section { padding: 90px 0; }
+    #visit { text-align: center;}
+    #visit .btn-brand { margin-bottom: 15px;}
 }
 
 @media (max-width: 768px) {
